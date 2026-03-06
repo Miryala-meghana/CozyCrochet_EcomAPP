@@ -48,36 +48,36 @@ public class DataSeeder implements CommandLineRunner {
         watch.setDescription("latest model noise smart watch with amazing features");
         watch.setCategory(Electronics);
         watch.setPrice(1999.00);
-        watch.setImage_url("https://placehold.co/600x400");
+        watch.setImage_url("http://localhost:8080/images/noiseWatch.webp");
 
         Product mouse=new Product();
-        mouse.setName("protonics wireless mouse");
+        mouse.setName("wireless mouse");
         mouse.setDescription("wireless mouse with dual functionality");
         mouse.setCategory(Electronics);
         mouse.setPrice(499.00);
-        mouse.setImage_url("https://placehold.co/600x400");
+        mouse.setImage_url("http://localhost:8080/images/mouse.jpg");
 
         Product towel=new Product();
-        towel.setName("cotton towel");
-        towel.setDescription("super smooth cotton towel for kids");
+        towel.setName("Towel");
+        towel.setDescription("super smooth cotton towel ");
         towel.setCategory(clothing);
         towel.setPrice(399.00);
-        towel.setImage_url("https://placehold.co/600x400");
+        towel.setImage_url("http://localhost:8080/images/cottontowel.jpg");
 
         Product hoodie=new Product();
-        hoodie.setName("cotton hoodie");
+        hoodie.setName("hoodie");
         hoodie.setDescription("super smooth cotton hoodie for women");
         hoodie.setCategory(clothing);
-        hoodie.setPrice(399.00);
-        hoodie.setImage_url("https://placehold.co/600x400");
+        hoodie.setPrice(999.00);
+        hoodie.setImage_url("http://localhost:8080/images/hoodie.jpg");
 
         Product kettle=new Product();
-        kettle.setName("superfast heat kettle");
+        kettle.setName("kettle");
         kettle.setDescription("kettle with the best heat control features");
         kettle.setCategory(home);
-        kettle.setPrice(1399.00);
+        kettle.setPrice(399.00);
 //        kettle.setImage_url("https://www.bing.com/images/search?view=detailV2&ccid=IdIl1sRd&id=62871DB9981AAE8444457627C3F5A4C7C614B2C4&thid=OIP.IdIl1sRdQD0FvYlfKz710wHaHv&mediaurl=https%3a%2f%2fpngimg.com%2fuploads%2fkettle%2fkettle_PNG8703.png&exph=1319&expw=1261&q=kettle+img&FORM=IRPRST&ck=4C299EED98C695214EDFFA8FCB64F880&selectedIndex=1&itb=1");
-        kettle.setImage_url("https://placehold.co/600x400");
+        kettle.setImage_url("http://localhost:8080/images/ketttle.webp");
         productRepository.saveAll(Arrays.asList(watch,towel,kettle,hoodie,mouse));
     }
 }

@@ -1,34 +1,87 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useState, useEffect } from "react";
 import './App.css'
+import ProductList from "./ProductList";
+import CategoryFilter from "./CategoryFilter";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [products, setProducts] = useState([]);
+  const [categories, setCategories] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState(null);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [sortOption, setSortOption] = useState("asc");
+   
+  useEffect(() => {
+    fetch('http://localhost:8080/api/products')
+      .then(response => response.json())
+      .then(data => setProducts(data));
+
+    fetch('http://localhost:8080/api/categories')
+      .then(response => response.json())
+      .then(data => setCategories(data));
+  }, []);
+const handlesearchTermChange = (e) => {
+  setSearchTerm(e.target.value);
+}
+
+const handleSortChange = (e) => {
+  setSortOption(e.target.value);
+}
+
+const handleCategorySelect = (categoryId) => {
+  setSelectedCategory(categoryId?Number(categoryId):null);
+}
+
+const filteredProducts = products
+  .filter(product =>{
+    return(
+      (selectedCategory ? product.category.id === selectedCategory : true) 
+      &&
+      (product.name.toLowerCase().includes(searchTerm.toLowerCase()) )
+    )
+  }).sort((a,b) => {
+    if(sortOption === "asc"){
+      return a.price - b.price;
+    }else{
+      return b.price - a.price;
+    }
+  });
+
 
   return (
-    <>
+    <div className='container'>
+      <div className="my-4"><h1>product catalog</h1></div>
+      <div className='row align-items-center mb-4'>
+        <div className='col-md-3 col-sm-12 mb-2'>
+          <CategoryFilter categories={categories} onSelect={handleCategorySelect} />
+        </div>
+        <div className='col-md-5 col-sm-12 mb-2'>
+          <input
+            type="text"
+            className='form-control'
+            placeholder='Search products...'
+            onChange={handlesearchTermChange}
+          />
+        </div>
+        <div className='col-md-4 col-sm-12 mb-2'>
+          <select className='form-control' onChange={handleSortChange}>
+            <option value="asc">Price: Low to High</option>
+            <option value="desc">Price: High to Low</option>
+          </select>
+        </div>
+
+      </div>  
+
+
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        {filteredProducts.length ? (
+          //display products
+          <ProductList products={filteredProducts} />
+        ):(
+          <p>products not found...</p>
+        )}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+      
+    </div>
   )
 }
 
