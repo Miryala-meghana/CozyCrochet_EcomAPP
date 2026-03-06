@@ -66,3 +66,39 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } */
+
+
+.app-heading{
+  font-size: 42px;
+  font-weight: bold;
+  text-align: center;
+  color: #ea6ed3;
+  letter-spacing: 2px;
+}
+.product-image{
+  height: 200px;
+  width: 100%;
+  object-fit: contain;
+  background-color: #f8f9fa;
+}
+
+body.light{
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.dark{
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark .card{
+  background-color: #1e1e1e;
+  color: white;
+}
+
+body.dark .form-control{
+  background-color: #2a2a2a;
+  color: white;
+  border: 1px solid #555;
+}

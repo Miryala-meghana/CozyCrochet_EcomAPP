@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class VotingAppApplication {
+public class EcomAppApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(VotingAppApplication.class, args);
+		SpringApplication.run(EcomAppApplication.class, args);
 	}
 
 }
