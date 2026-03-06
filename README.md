@@ -11,15 +11,22 @@ This project highlights the integration of frontend frameworks with backend APIs
 Features
 
 ✔ View all crochet products
+
 ✔ Search products by name
+
 ✔ Filter products by category
+
 ✔ Sort products by price (Low → High / High → Low)
+
 ✔ Responsive product cards using Bootstrap
+
 ✔ Dark Mode / Light Mode toggle
+
 ✔ Clean and modern UI
 
 
-🛠️ Technologies Used
+🛠️ Technologies Used:
+
 ✔ Frontend:
 
 React
@@ -45,6 +52,7 @@ GitHub
 VS Code
 
 ⚙️ Installation & Setup:
+
 1️) Clone the repository
     git clone https://github.com/your-username/cozy-crochet.git
 2️) Navigate to the project
@@ -57,6 +65,7 @@ VS Code
    The application will run on:
 
    http://localhost:5173
+   
 5️) Run the backend server
 
    Make sure your backend API is running on:
