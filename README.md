@@ -8,7 +8,7 @@ The application demonstrates key e-commerce functionalities, including product l
 
 This project highlights the integration of frontend frameworks with backend APIs, showcasing full-stack development concepts and modern web development practices.
 
-Features
+Features:
 
 ✔ View all crochet products
 
@@ -55,17 +55,20 @@ VS Code
 
 1️) Clone the repository
     git clone https://github.com/your-username/cozy-crochet.git
+
 2️) Navigate to the project
     cd cozy-crochet
+
 3️) Install frontend dependencies
      npm install
+
 4️) Run the frontend application
     npm run dev
 
    The application will run on:
 
    http://localhost:5173
-   
+
 5️) Run the backend server
 
    Make sure your backend API is running on:
@@ -75,4 +78,5 @@ VS Code
 Available endpoints:
 
 GET /api/products
+
 GET /api/categories
