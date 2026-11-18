@@ -54,7 +54,7 @@ public class DataSeeder implements CommandLineRunner {
         babyRuffles.setDescription("cute baby ruffles made with love");
         babyRuffles.setCategory(Socks);
         babyRuffles.setPrice(1999.00);
-        babyRuffles.setImage_url("http://localhost:8080/images/babyruffles.jpg");
+        babyRuffles.setImage_url("/images/babyruffles.jpg");
         productRepository.save(babyRuffles);
 
         Product blue=new Product();
@@ -62,7 +62,7 @@ public class DataSeeder implements CommandLineRunner {
         blue.setDescription("beautiful blue pink socks");
         blue.setCategory(Socks);
         blue.setPrice(299.00);
-        blue.setImage_url("http://localhost:8080/images/bluepinksocks.jpg");
+        blue.setImage_url("/images/bluepinksocks.jpg");
         productRepository.save(blue);
 
         //BOUQUETS
@@ -72,7 +72,7 @@ public class DataSeeder implements CommandLineRunner {
         bluerosebou.setDescription("Bold blue rose");
         bluerosebou.setCategory(Bouquets);
         bluerosebou.setPrice(899.00);
-        bluerosebou.setImage_url("http://localhost:8080/images/bluerosebou.jpg");
+        bluerosebou.setImage_url("/images/bluerosebou.jpg");
         productRepository.save(bluerosebou);
 
 
@@ -81,7 +81,7 @@ public class DataSeeder implements CommandLineRunner {
         heartbouquet.setDescription("heartfelt bouquet");
         heartbouquet.setCategory(Bouquets);
         heartbouquet.setPrice(399.00);
-        heartbouquet.setImage_url("http://localhost:8080/images/heartbouquet.jpg");
+        heartbouquet.setImage_url("/images/heartbouquet.jpg");
         productRepository.save(heartbouquet);
 
         Product minibouquet=new Product();
@@ -89,7 +89,7 @@ public class DataSeeder implements CommandLineRunner {
         minibouquet.setDescription("mini flower bouquet");
         minibouquet.setCategory(Bouquets);
         minibouquet.setPrice(569.00);
-        minibouquet.setImage_url("http://localhost:8080/images/minibouquet.jpg");
+        minibouquet.setImage_url("/images/minibouquet.jpg");
         productRepository.save(minibouquet);
 
         Product rosebouquet=new Product();
@@ -97,7 +97,7 @@ public class DataSeeder implements CommandLineRunner {
         rosebouquet.setDescription("rose flower bouquet");
         rosebouquet.setCategory(Bouquets);
         rosebouquet.setPrice(559.00);
-        rosebouquet.setImage_url("http://localhost:8080/images/rosebouquet.jpg");
+        rosebouquet.setImage_url("/images/rosebouquet.jpg");
         productRepository.save(rosebouquet);
 
         //DOLLS
@@ -106,7 +106,7 @@ public class DataSeeder implements CommandLineRunner {
         cottagedoll.setDescription("pretty doll");
         cottagedoll.setCategory(Dolls);
         cottagedoll.setPrice(599.00);
-        cottagedoll.setImage_url("http://localhost:8080/images/cottagedoll.jpg");
+        cottagedoll.setImage_url("/images/cottagedoll.jpg");
         productRepository.save(cottagedoll);
 
         Product krishnaDoll=new Product();
@@ -114,7 +114,7 @@ public class DataSeeder implements CommandLineRunner {
         krishnaDoll.setDescription("pretty Krishna doll");
         krishnaDoll.setCategory(Dolls);
         krishnaDoll.setPrice(999.00);
-        krishnaDoll.setImage_url("http://localhost:8080/images/krishnaDoll.jpeg");
+        krishnaDoll.setImage_url("/images/krishnaDoll.jpeg");
         productRepository.save(krishnaDoll);
 
         Product pandaDoll=new Product();
@@ -122,7 +122,7 @@ public class DataSeeder implements CommandLineRunner {
         pandaDoll.setDescription("pretty panda");
         pandaDoll.setCategory(Dolls);
         pandaDoll.setPrice(499.00);
-        pandaDoll.setImage_url("http://localhost:8080/images/pandaDoll.jpeg");
+        pandaDoll.setImage_url("/images/pandaDoll.jpeg");
         productRepository.save(pandaDoll);
 
         Product deviDoll =new Product();
@@ -130,7 +130,7 @@ public class DataSeeder implements CommandLineRunner {
         deviDoll.setDescription("devotional devi");
         deviDoll.setCategory(Dolls);
         deviDoll.setPrice(499.00);
-        deviDoll.setImage_url("http://localhost:8080/images/deviDoll.jpeg");
+        deviDoll.setImage_url("/images/deviDoll.jpeg");
         productRepository.save(deviDoll);
 
         //KEYCHAINS
@@ -140,7 +140,7 @@ public class DataSeeder implements CommandLineRunner {
         evileyekey.setDescription("protects you from the NASAR");
         evileyekey.setCategory(KeyChains);
         evileyekey.setPrice(399.00);
-        evileyekey.setImage_url("http://localhost:8080/images/evileyekey.jpg");
+        evileyekey.setImage_url("/images/evileyekey.jpg");
         productRepository.save(evileyekey);
 
         Product flowerkey=new Product();
@@ -148,7 +148,7 @@ public class DataSeeder implements CommandLineRunner {
         flowerkey.setDescription("cute Flowers keyChain");
         flowerkey.setCategory(KeyChains);
         flowerkey.setPrice(199.00);
-        flowerkey.setImage_url("http://localhost:8080/images/flowerkey.jpg");
+        flowerkey.setImage_url("/images/flowerkey.jpg");
         productRepository.save(flowerkey);
 
         Product heartkey=new Product();
@@ -156,7 +156,7 @@ public class DataSeeder implements CommandLineRunner {
         heartkey.setDescription("cute heart keyChain");
         heartkey.setCategory(KeyChains);
         heartkey.setPrice(199.00);
-        heartkey.setImage_url("http://localhost:8080/images/heartkey.jpg");
+        heartkey.setImage_url("/images/heartkey.jpg");
         productRepository.save(heartkey);
 
         //BabyFrocks
@@ -165,7 +165,7 @@ public class DataSeeder implements CommandLineRunner {
         pinkfrock.setDescription("pretty pink frock");
         pinkfrock.setCategory(BabyFrocks);
         pinkfrock.setPrice(599.00);
-        pinkfrock.setImage_url("http://localhost:8080/images/pinkfrock.jpg");
+        pinkfrock.setImage_url("/images/pinkfrock.jpg");
         productRepository.save(pinkfrock);
 
         Product purpelfrock=new Product();
@@ -173,7 +173,7 @@ public class DataSeeder implements CommandLineRunner {
         purpelfrock.setDescription("pretty purple frock");
         purpelfrock.setCategory(BabyFrocks);
         purpelfrock.setPrice(499.00);
-        purpelfrock.setImage_url("http://localhost:8080/images/purpelfrock.jpg");
+        purpelfrock.setImage_url("/images/purpelfrock.jpg");
         productRepository.save(purpelfrock);
 
         Product yellowfrock=new Product();
@@ -181,7 +181,7 @@ public class DataSeeder implements CommandLineRunner {
         yellowfrock.setDescription("pretty frock");
         yellowfrock.setCategory(BabyFrocks);
         yellowfrock.setPrice(399.00);
-        yellowfrock.setImage_url("http://localhost:8080/images/yellowfrock.jpg");
+        yellowfrock.setImage_url("/images/yellowfrock.jpg");
         productRepository.save(yellowfrock);
 
     }

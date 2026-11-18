@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import './App.css'
 import ProductList from "./ProductList";
 import CategoryFilter from "./CategoryFilter";
+import { API_URL } from "./config";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -16,11 +17,11 @@ function App() {
   }, [theme]);
 
   useEffect(() => {
-    fetch('http://localhost:8080/api/products')
+    fetch(API_URL + '/api/products')
       .then(response => response.json())
       .then(data => setProducts(data));
 
-    fetch('http://localhost:8080/api/categories')
+    fetch(API_URL + '/api/categories')
       .then(response => response.json())
       .then(data => setCategories(data));
   }, []);
