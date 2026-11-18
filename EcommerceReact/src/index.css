@@ -102,3 +102,7 @@ body.dark .form-control{
   color: white;
   border: 1px solid #555;
 }
+
+body.dark .form-control::placeholder{
+  color: #aaa;
+}
