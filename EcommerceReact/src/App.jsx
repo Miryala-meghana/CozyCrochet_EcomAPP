@@ -96,7 +96,7 @@ const toggleTheme = () => {
 
       <div>
         {loading ? (
-          <p>Loading products... (this can take up to a minute on first visit)</p>
+          <p>Loading products...</p>
         ) : filteredProducts.length ? (
           <ProductList products={filteredProducts} />
         ) : (
