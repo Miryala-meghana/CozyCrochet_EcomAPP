@@ -11,7 +11,9 @@ function App() {
   const [searchTerm, setSearchTerm] = useState("");
   const [sortOption, setSortOption] = useState("asc");
   const [theme, setTheme] = useState("dark");
-   
+  // True until the products request finishes (the free backend can take ~1 min to wake up)
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     document.body.className = theme;
   }, [theme]);
@@ -19,7 +21,8 @@ function App() {
   useEffect(() => {
     fetch(API_URL + '/api/products')
       .then(response => response.json())
-      .then(data => setProducts(data));
+      .then(data => setProducts(data))
+      .finally(() => setLoading(false));
 
     fetch(API_URL + '/api/categories')
       .then(response => response.json())
@@ -92,7 +95,9 @@ const toggleTheme = () => {
       </div>
 
       <div>
-        {filteredProducts.length ? (
+        {loading ? (
+          <p>Loading products... (this can take up to a minute on first visit)</p>
+        ) : filteredProducts.length ? (
           <ProductList products={filteredProducts} />
         ) : (
           <p>products not found...</p>
